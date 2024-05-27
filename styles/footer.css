@@ -36,6 +36,16 @@
   color: black;
 }
 
+.vertical-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.vertical-list a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .footerContainer .imageListContainer {
     width: 50%;
     height: auto;
