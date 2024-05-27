@@ -1,0 +1,254 @@
+@font-face {
+  font-family: Montserrat-MediumItalic;
+  src: url(../fonts/Montserrat-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.headerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 11vh;
+  background-color: #808080;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  font-family: Montserrat-MediumItalic, Arial, Helvetica, sans-serif;
+  z-index: 3;
+}
+
+.menu .menu-toggle {
+  margin-left: 85%;
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 3vh;
+  color: white;
+  cursor: pointer;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 2vw;
+}
+
+.menu ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 3vh;
+  font-style: Montserrat-Regular, Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+}
+
+.menu ul li a:hover {
+  color: rgb(40, 40, 40);
+}
+
+.headerContainer .blackRectangle {
+  position: absolute;
+  top: 3vw;
+  left: 53vw;
+  height: 94vh;
+  width: 50%;
+  background-color: black;
+  opacity: 0.5;
+  filter: blur(70px);
+  z-index: 2;
+}
+
+.headerContainer .logo {
+  position: absolute;
+  top: 1.8vh;
+  left: 8vw;
+  max-width: 12vw;
+  height: auto;
+  z-index: 3;
+}
+
+.description {
+  position: absolute;
+  top: 23vh;
+  left: 62vw;
+  z-index: 4;
+}
+
+.description h1 {
+  margin: 0;
+  margin-left: 4vw;
+  font-family: Montserrat-Bold, Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 6vh;
+  margin-bottom: 2vh;
+}
+
+.description p {
+  margin: 0;
+  color: white;
+  margin-left: 4vw;
+  font-size: 3vh;
+  font-family: Montserrat-Regular, Arial, Helvetica, sans-serif;
+  margin-bottom: 2vh;
+}
+
+.description .horizontalLine {
+  position: relative;
+  height: 0.1vh;
+  width: 100%;
+  background-color: white;
+  background: linear-gradient(to right, transparent 0%, white 10%, white 90%, transparent 100%);
+  margin-top: 0vh;
+  margin-bottom: 2vh;
+  z-index: 3;
+}
+
+.buttonContactUs {
+  margin: 0;
+  height: 8vh;
+  margin-top: 3vh;
+  margin-left: 6.5vw;
+  width: 15vw;
+  border-radius: 0.5vw;
+  background-color: #808080;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContactUs a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: Montserrat-Medium, Arial, Helvetica, sans-serif;
+  font-size: 4vh;
+}
+
+.buttonContactUs:hover {
+  background-color: rgb(86, 86, 86);
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  .menu .menu-toggle {
+    display: block;
+  }
+
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul.show {
+    display: flex;
+  }
+
+  .menu ul li {
+    display: block;
+    margin-bottom: 1vh;
+  }
+
+  .headerContainer .logo {
+    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15vw;
+    max-width: 20vw;
+  }
+
+  .headerContainer .blackRectangle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 50%;
+  }
+
+  .description {
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  .buttonContactUs {
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .headerContainer .logo {
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vw;
+    max-width: 35vw;
+  }
+}
